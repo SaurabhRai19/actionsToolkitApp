@@ -20,7 +20,23 @@ try {
   });
   console.log(issue);
   //--------------
-  //Atifact Package
+  //Cache Dependencies
+
+  const cache = require('@actions/cache');
+const paths = [
+    'node_modules',
+    'packages/*/node_modules/'
+]
+const key = 'npm-foobar-d5ea0750';
+const cacheId = await cache.saveCache(paths, key);
+
+console.log(cacheId);
+
+
+
+
+  //
+  //Artifact Package - Path Issue
 
   const artifactName = 'my-artifact';
 const files = [
@@ -33,7 +49,7 @@ const options = {
 
 const uploadResult = await artifactClient.uploadArtifact(artifactName, files, rootDirectory, options);
 
-  
+  //--------------------------
 
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
