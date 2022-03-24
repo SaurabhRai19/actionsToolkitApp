@@ -36,7 +36,7 @@ console.log(cacheId);
 
 
   //
-  //Artifact Package - Path Issue
+  /*Artifact Package - Path Issue
 
   const artifactName = 'my-artifact';
 const files = [
@@ -49,7 +49,7 @@ const options = {
 
 const uploadResult = await artifactClient.uploadArtifact(artifactName, files, rootDirectory, options);
 
-  //--------------------------
+  --------------------------*/
 
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
