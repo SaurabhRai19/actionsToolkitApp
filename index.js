@@ -26,7 +26,7 @@ try {
 const files = [
     '/actionsToolkitApp/file1.txt'
 ]
-const rootDirectory = '/actionsToolkitApp'
+const rootDirectory = 'ActionsToolkitPackages/actionsToolkitApp'
 const options = {
     continueOnError: true
 }
