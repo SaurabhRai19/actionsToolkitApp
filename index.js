@@ -1,9 +1,21 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
+async function run(){
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
+  
+  const myToken = core.getInput('myToken');
+  const octokit = github.getOctokit(myToken)
+  
+  const {data: issue} = await octokit.rest.issues.create({
+    owner: 'saurabhrai19',
+    repo: 'practice_repo',
+    title: 'Issue created from custom action app',
+  });
+  console.log(issue);
+
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
@@ -13,3 +25,5 @@ try {
 } catch (error) {
   core.setFailed(error.message);
 }
+}
+run();
