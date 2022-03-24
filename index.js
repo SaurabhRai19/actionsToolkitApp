@@ -24,7 +24,7 @@ try {
 
   const artifactName = 'my-artifact';
 const files = [
-    './file1.txt'
+    'file1.txt'
 ]
 const rootDirectory = '.'
 const options = {
