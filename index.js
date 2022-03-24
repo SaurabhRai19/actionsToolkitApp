@@ -24,16 +24,16 @@ try {
 
   const artifactName = 'my-artifact';
 const files = [
-    'C:\Users\Asus\Desktop\Github Actions\ActionsToolkitPackages\actionsToolkitApp\file1.txt'
+    `C:\Users\Asus\Desktop\Github Actions\ActionsToolkitPackages\actionsToolkitApp\file1.txt`
 ]
-const rootDirectory = 'C:\Users\Asus\Desktop\Github Actions\ActionsToolkitPackages\actionsToolkitApp'
+const rootDirectory = `C:\Users\Asus\Desktop\Github Actions\ActionsToolkitPackages\actionsToolkitApp`
 const options = {
     continueOnError: true
 }
 
-const uploadResult = await artifactClient.uploadArtifact(artifactName, files, rootDirectory, options)
+const uploadResult = await artifactClient.uploadArtifact(artifactName, files, rootDirectory, options);
 
-  //
+  
 
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
