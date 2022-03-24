@@ -24,9 +24,9 @@ try {
 
   const artifactName = 'my-artifact';
 const files = [
-    `C:/Users/Asus/Desktop/GithubActions/ActionsToolkitPackages/actionsToolkitApp/file1.txt`
+    'file1.txt'
 ]
-const rootDirectory = `C:/Users/Asus/Desktop/GithubActions/ActionsToolkitPackages/actionsToolkitApp/`
+const rootDirectory = '.'
 const options = {
     continueOnError: true
 }
